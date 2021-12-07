@@ -1,0 +1,34 @@
+<div class="text-layout">
+  <h1>Pipes no comunes</h1>
+  <p>Pipes inclúidos en Angular - Usualmente en el Common Module</p>
+</div>
+<div class="grid">
+  <div class="col col-6">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <p>Saludos {{nombre}}, es un placer 
+      {{genero | i18nSelect:invitacionMapa}}
+      a nuestro evento.</p>
+      <button
+        pButton
+        type="button"
+        label="Cambiar persona"
+        class="p-button-outlined p-button-success"
+        (click)="cambiarCliente()"
+      >
+      </button>
+    </p-fieldset>
+  </div>
+  <div class="col col-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>Actualmente {{ clientes.length | i18nPlural:clientesMapa }}.</p>
+      <button
+        pButton
+        type="button"
+        label="Borrar cliente"
+        class="p-button-outlined p-button-danger"
+        (click)="borrarCliente()"
+      >
+      </button>
+    </p-fieldset>
+  </div>
+</div>
